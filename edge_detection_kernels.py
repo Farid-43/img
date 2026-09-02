@@ -137,18 +137,11 @@ def convolve(image, kernel):
     k_size = kernel.shape[0]
     pad = k_size // 2
 
-    # Zero-padded image
-    padded = np.zeros(
-        (img_height + 2 * pad, img_width + 2 * pad),
-        dtype=np.float32
-    )
-
-    for i in range(img_height):
-        for j in range(img_width):
-            padded[i + pad][j + pad] = image[i][j]
+    # Zero-padded image using np.pad
+    padded = np.pad(image, ((pad, pad), (pad, pad)), mode='constant', constant_values=0)
 
     # Raw floating-point output
-    output = np.zeros((img_height, img_width),dtype=np.float32)
+    output = np.zeros((img_height, img_width), dtype=np.float32)
 
     # Convolution
     for i in range(img_height):
