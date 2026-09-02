@@ -1,3 +1,4 @@
+# 4. hist equal.py
 # import
 import cv2
 import numpy as np

@@ -1,3 +1,4 @@
+# 14. gaussian notch.py
 # Fourier transform - Gaussian notch reject filter
 
 import cv2

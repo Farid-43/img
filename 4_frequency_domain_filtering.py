@@ -1,3 +1,4 @@
+# 4_frequency_domain_filtering.py
 """
 Frequency Domain Filtering — ALL filters built manually from equations
 ========================================================================
